@@ -35,7 +35,11 @@ const authenticatedUser = (username, password) => {
 
 const app = express();
 
-app.use(session({secret:"fingerpint"},resave=true,saveUninitialized=true));
+app.use(session({
+  secret: "fingerpint",
+  resave: true,
+  saveUninitialized: true
+}));
 
 app.use(express.json());
 
